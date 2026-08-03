@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import importlib
 import math
 
 # Multilingual model suitable for the Vietnamese corpora used in this Lab.
@@ -32,7 +33,13 @@ class LocalEmbedder:
     """Sentence Transformers-backed local embedder."""
 
     def __init__(self, model_name: str = LOCAL_EMBEDDING_MODEL) -> None:
-        from sentence_transformers import SentenceTransformer
+        try:
+            sentence_transformers = importlib.import_module("sentence_transformers")
+            SentenceTransformer = sentence_transformers.SentenceTransformer
+        except ImportError:  # pragma: no cover - optional dependency
+            raise ImportError(
+                "sentence-transformers is not installed. Install requirements-local.txt to use LocalEmbedder."
+            ) from None
 
         self.model_name = model_name
         self._backend_name = model_name
@@ -49,7 +56,13 @@ class OpenAIEmbedder:
     """OpenAI embeddings API-backed embedder."""
 
     def __init__(self, model_name: str = OPENAI_EMBEDDING_MODEL) -> None:
-        from openai import OpenAI
+        try:
+            openai = importlib.import_module("openai")
+            OpenAI = openai.OpenAI
+        except ImportError:  # pragma: no cover - optional dependency
+            raise ImportError(
+                "openai is not installed. Install the package to use OpenAIEmbedder."
+            ) from None
 
         self.model_name = model_name
         self._backend_name = model_name

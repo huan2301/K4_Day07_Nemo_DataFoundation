@@ -159,10 +159,10 @@ class TestRecursiveChunker(unittest.TestCase):
 
 class TestEmbeddingStore(unittest.TestCase):
 
-    def _make_store(self) -> EmbeddingStore:
+    def _make_store(self):
         return EmbeddingStore(collection_name="test", embedding_fn=_mock_embed)
 
-    def _make_docs(self, n: int = 3) -> list[Document]:
+    def _make_docs(self, n: int = 3):
         return [
             Document(id=f"doc{i}", content=f"This is document number {i}.", metadata={})
             for i in range(n)
@@ -220,7 +220,7 @@ class TestEmbeddingStore(unittest.TestCase):
 
 class TestKnowledgeBaseAgent(unittest.TestCase):
 
-    def _make_agent(self) -> KnowledgeBaseAgent:
+    def _make_agent(self):
         store = EmbeddingStore(collection_name="kb_test", embedding_fn=_mock_embed)
         docs = [
             Document(
