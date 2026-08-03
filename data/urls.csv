@@ -1,0 +1,6 @@
+url,doc_id,title,customer_role,category,language,document_version,license_or_permission
+https://www.ebay.com/help/selling/returns-refunds/return-policy?id=4260,k4-ebay-return-policy,eBay Return Policy,buyer,returns,en,not-stated,public-source
+https://support.google.com/merchants/answer/6150127,k4-google-merchant-policy,Google Merchant Center - Misrepresentation & Policies,seller,seller_policy,en,not-stated,public-source
+https://help.shopify.com/en/manual/orders/returns-and-refunds,k4-shopify-returns,Shopify Order Management - Returns & Refunds,buyer,returns,en,not-stated,public-source
+https://help.shopify.com/en/manual/customers/customer-service,k4-shopify-customer-service,Shopify Providing Online Customer Service,both,customer_support,en,not-stated,public-source
+https://help.shopify.com/en/manual/payments,k4-shopify-payments,Shopify Payments,both,payment,en,not-stated,public-source
