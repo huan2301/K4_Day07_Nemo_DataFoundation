@@ -121,4 +121,16 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    report_dir = Path("report")
+    report_dir.mkdir(exist_ok=True)
+
+    output_file = report_dir / "benchmark_result.txt"
+
+    import sys
+    from contextlib import redirect_stdout
+
+    with output_file.open("w", encoding="utf-8") as f:
+        with redirect_stdout(f):
+            main()
+
+    print(f"Benchmark result saved to: {output_file}")

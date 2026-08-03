@@ -1,0 +1,124 @@
+=========================================
+Strategy:
+RecursiveChunker(chunk_size=400, separators=['\n## ', '\n# ', '\n\n', '\n', '. ', ' '])
+
+Total chunks loaded: 11
+=========================================
+
+Query id: Q1
+Question: How can a Shopify merchant issue a refund for an order?
+--------------------
+Rank: 1
+Score: 0.14145646557826
+doc_id: k4-ebay-return-policy
+chunk_index: 0
+content: # eBay Return Policy (excerpt)  eBay documents include details about what personal data is shared in transactions, seller/buyer responsibilities, and 
+--------------------
+Rank: 2
+Score: 0.0703809398136602
+doc_id: k4-shopify-returns
+chunk_index: 1
+content: Order fulfillment is the workflow of processing, managing, and shipping customer orders from your Shopify store. After customers place orders, you can
+--------------------
+Rank: 3
+Score: -0.05795126851148022
+doc_id: k4-shopify-returns
+chunk_index: 0
+content: # Order management and fulfillment — Returns & refunds (excerpt)
+
+Answer:
+Answer derived from context: [1] doc_id: k4-ebay-return-policy content: # eBay Return Policy (excerpt) eBay documents include details about what personal data is shared in transactions, seller/buyer responsibilities, and how returns and refunds are managed via the platform. Sellers must follow eBay rules and buyers can request 
+
+Query id: Q2
+Question: What payment methods can customers use on a Shopify store?
+--------------------
+Rank: 1
+Score: 0.17718949590809416
+doc_id: k4-shopify-customer-service
+chunk_index: 0
+content: # Providing online customer service (excerpt)  Providing a positive experience for your customers whenever they interact with your business can increa
+--------------------
+Rank: 2
+Score: 0.08694333052906503
+doc_id: k4-shopify-payments
+chunk_index: 0
+content: # Payments (excerpt)  When a customer checks out, they can choose to pay using any methods activated in Payment providers. You can enable Shopify Paym
+--------------------
+Rank: 3
+Score: 0.04818391186036938
+doc_id: k4-shopify-payments
+chunk_index: 1
+content: Manage payment methods in the Payment providers area of Shopify admin. Consider country and currency support when choosing gateways.  > Source: Shopif
+
+Answer:
+Answer derived from context: [1] doc_id: k4-shopify-returns content: Order fulfillment is the workflow of processing, managing, and shipping customer orders from your Shopify store. After customers place orders, you can manage orders from the Orders page in your Shopify admin. This includes capturing payments, reviewing order d
+
+Query id: Q3
+Question: What practices can lead to account suspension under Google Merchant Center policies?
+--------------------
+Rank: 1
+Score: -0.04343434217291744
+doc_id: k4-google-merchant-policy
+chunk_index: 1
+content: Best practices: deliver what customers paid for, clearly describe business and contacts, avoid misleading branding, and disclose return/refund and shi
+--------------------
+Rank: 2
+Score: -0.17760935849859277
+doc_id: k4-google-merchant-policy
+chunk_index: 0
+content: # Google Merchant Center — Policy excerpt  Google requires merchants to be upfront and provide all relevant information. Disallowed practices include 
+
+Answer:
+Answer derived from context: [1] doc_id: k4-shopify-customer-service content: # Providing online customer service (excerpt) Providing a positive experience for your customers whenever they interact with your business can increase the likelihood that they return in the future. How you interact with customers is a large part of t
+
+Query id: Q4
+Question: What customer service practices does Shopify recommend?
+--------------------
+Rank: 1
+Score: 0.13287465391614378
+doc_id: k4-shopify-payments
+chunk_index: 0
+content: # Payments (excerpt)  When a customer checks out, they can choose to pay using any methods activated in Payment providers. You can enable Shopify Paym
+--------------------
+Rank: 2
+Score: 0.03780538850366592
+doc_id: k4-shopify-payments
+chunk_index: 1
+content: Manage payment methods in the Payment providers area of Shopify admin. Consider country and currency support when choosing gateways.  > Source: Shopif
+--------------------
+Rank: 3
+Score: 0.037263529353392465
+doc_id: k4-shopify-customer-service
+chunk_index: 1
+content: Key practices include: setting clear store policies (shipping, returns, contact channels), offering multiple contact methods (chat, email, social), us
+
+Answer:
+Answer derived from context: [1] doc_id: k4-shopify-payments content: # Payments (excerpt) When a customer checks out, they can choose to pay using any methods activated in Payment providers. You can enable Shopify Payments, third-party providers (PayPal, Amazon Pay, Apple Pay), and accelerated checkouts. If you use Shopify Pay
+
+Query id: Q5
+Question: What should I know about return policies?
+--------------------
+Rank: 1
+Score: 0.23712903209389344
+doc_id: k4-shopify-returns
+chunk_index: 0
+content: # Order management and fulfillment — Returns & refunds (excerpt)
+--------------------
+Rank: 2
+Score: 0.2109639671657516
+doc_id: k4-ebay-return-policy
+chunk_index: 0
+content: # eBay Return Policy (excerpt)  eBay documents include details about what personal data is shared in transactions, seller/buyer responsibilities, and 
+--------------------
+Rank: 3
+Score: -0.10654561033741514
+doc_id: k4-shopify-returns
+chunk_index: 1
+content: Order fulfillment is the workflow of processing, managing, and shipping customer orders from your Shopify store. After customers place orders, you can
+
+Answer:
+Answer derived from context: [1] doc_id: k4-shopify-returns content: # Order management and fulfillment — Returns & refunds (excerpt) [2] doc_id: k4-ebay-return-policy content: # eBay Return Policy (excerpt) eBay documents include details about what personal data is shared in transactions, seller/buyer responsibilities, and how
+=========================================
+Benchmark finished
+Total queries: 5
+=========================================
