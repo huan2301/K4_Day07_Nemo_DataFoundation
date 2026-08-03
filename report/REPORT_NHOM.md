@@ -73,10 +73,15 @@ Chạy `ChunkingStrategyComparator().compare()` trên 2-3 tài liệu:
 - **Mô tả & lý do chọn:**
 - **Code snippet (nếu custom):**
 
-**Thành viên 3 — [Tên]**
-- **Loại chiến lược:**
-- **Mô tả & lý do chọn:**
-- **Code snippet (nếu custom):**
+**Thành viên 3 — Vương Đức Thoại (2A202601770)**
+- **Loại chiến lược:** `RecursiveChunker(chunk_size=400)`.
+- **Mô tả & lý do chọn:** Chiến lược ưu tiên chia theo ranh giới tự nhiên theo thứ tự đoạn văn (`\n\n`), dòng (`\n`), câu (`. `), từ và cuối cùng mới cắt theo ký tự. Cách này phù hợp với tài liệu chính sách/Help Center có cấu trúc đoạn và câu rõ ràng, giúp hạn chế cắt giữa một điều kiện hoặc hướng dẫn; corpus hiện tại được chia thành 11 chunks.
+- **Code snippet (cấu hình strategy):**
+```python
+chunker = RecursiveChunker(chunk_size=400)
+```
+- **Kết quả cá nhân:** Cả 5/5 query đều có chunk chứa bằng chứng trực tiếp trong top-3; evidence rank lần lượt là `2, 2, 2, 3, 2`, nhưng chưa query nào có evidence ở top-1. Điểm tạm tính theo rubric là **5/10** vì retrieval có chunk liên quan nhưng agent hiện chỉ là demo stub, chưa đủ căn cứ chấm câu trả lời đúng.
+- **A/B metadata filter:** Với query 5, `customer_role=buyer` loại tài liệu vai trò `both` khỏi top-3 nhưng evidence eBay vẫn ở hạng 2 trong cả hai lần chạy. Chi tiết và failure analysis: `report/BENCHMARK_VUONG_DUC_THOAI.md`.
 
 ### So Sánh Giữa Các Thành Viên
 
@@ -84,7 +89,7 @@ Chạy `ChunkingStrategyComparator().compare()` trên 2-3 tài liệu:
 |-----------|----------|----------------------|-----------|----------|
 | | | | | |
 | | | | | |
-| | | | | |
+| Vương Đức Thoại (TV3) | `RecursiveChunker(chunk_size=400)` | 5/10 (tạm tính, mock) | 5/5 query có evidence trong top-3; giữ ranh giới tự nhiên; metadata filter hoạt động | Evidence chỉ ở hạng 2–3, không ở top-1; MockEmbedder và demo agent chưa đủ để kết luận chất lượng ngữ nghĩa |
 
 **Chiến lược nào tốt nhất cho chủ đề này? Tại sao?**
 > *Viết 2-3 câu — đây là phần được đánh giá cao nhất (khả năng suy nghĩ & giải thích):*
