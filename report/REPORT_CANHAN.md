@@ -1,8 +1,8 @@
 # Báo Cáo Cá Nhân — Lab 7: Embedding & Vector Store
 
-**Họ tên:** [Tên sinh viên]
-**Nhóm:** [Tên nhóm]
-**Ngày:** [Ngày nộp]
+**Họ tên:** Quách Thanh Hưng
+**Nhóm:** Nemo
+**Ngày:** 3/8/2026  
 
 > **Nộp 1 bản / sinh viên.** Phần nhóm (lựa chọn tài liệu, thiết kế chiến lược, bộ câu hỏi đánh giá, demo) nộp chung 1 bản trong `REPORT_NHOM.md`. Chi tiết thang điểm: `docs/SCORING.md`.
 
@@ -15,29 +15,29 @@
 ### Độ tương tự Cosine (Cosine Similarity) (Bài tập 1.1)
 
 **Độ tương tự cosine cao (High cosine similarity) nghĩa là gì?**
-> *Viết 1-2 câu:*
+> *Các câu có cosine similarity cao -> có độ tương đồng cao về mặt ngữ nghĩa*
 
 **Ví dụ có độ tương tự CAO:**
-- Câu A:
-- Câu B:
+- Câu A: Chính sách giao nhận
+- Câu B: Nghĩa vụ shipper
 - Tại sao tương đồng:
 
 **Ví dụ có độ tương tự THẤP:**
-- Câu A:
-- Câu B:
+- Câu A: Trời mưa to
+- Câu B: Dịch vụ khách hàng
 - Tại sao khác:
 
 **Tại sao độ tương tự cosine (cosine similarity) được ưu tiên hơn khoảng cách Euclid (Euclidean distance) cho text embeddings?**
-> *Viết 1-2 câu:*
+> *Vì cosine similarity thể hiện độ giống nhau ngữ nghĩa tốt hơn cho dù các câu đấy có thể có cách diễn đạt khác nhau hoàn toàn*
 
 ### Bài toán tính toán Chunking (Bài tập 1.2)
 
 **Tài liệu 10,000 ký tự, chunk_size=500, overlap=50. Bao nhiêu chunks?**
-> *Trình bày phép tính:*
-> *Đáp án:*
+> *Trình bày phép tính: (10000 - 50)/(500-50)*
+> *Đáp án:23*
 
 **Nếu độ chồng chéo (overlap) tăng lên 100, số lượng chunk thay đổi thế nào? Tại sao muốn độ chồng chéo nhiều hơn?**
-> *Viết 1-2 câu:*
+> *Overlap tăng -> chunk tăng và ta muốn điều này nếu các đoạn văn cấn có liên hệ với nhau rõ hơn*
 
 ---
 

@@ -48,13 +48,15 @@
 
 ### Phân tích đường cơ sở (Baseline Analysis)
 
-Chạy `ChunkingStrategyComparator().compare()` trên 2-3 tài liệu:
+Chạy `ChunkingStrategyComparator().compare()` trên 3 tài liệu `google-merchant-policy`,
+`k4-shopify-returns`, và `k4-shopify-customer-service`, với `chunk_size=200`. Dữ liệu
+đầu vào là `Document.content` từ `load_documents()`, nên YAML front matter đã được loại bỏ.
 
 | Tài liệu | Chiến lược (Strategy) | Số lượng Chunk | Độ dài trung bình | Giữ được ngữ cảnh không? |
 |-----------|----------|-------------|------------|-------------------|
-| | FixedSizeChunker (`fixed_size`) | | | |
-| | SentenceChunker (`by_sentences`) | | | |
-| | RecursiveChunker (`recursive`) | | | |
+| 3 tài liệu trên | FixedSizeChunker (`fixed_size`) | 17 | 188.18 | Trung bình: giữ overlap nhưng có thể cắt giữa câu. |
+| 3 tài liệu trên | SentenceChunker (`by_sentences`) | 7 | 355.29 | Tốt: mỗi chunk giữ nguyên ranh giới câu. |
+| 3 tài liệu trên | RecursiveChunker (`recursive`) | 27 | 92.56 | Khá tốt: ưu tiên đoạn/câu, nhưng chunk nhỏ hơn khi phải tách tiếp. |
 
 ### Chiến lược của từng thành viên
 
