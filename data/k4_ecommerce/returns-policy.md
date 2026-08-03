@@ -1,18 +1,18 @@
 ---
-doc_id: k4-returns-policy
-title: Chính sách đổi trả
-customer_role: buyer        # buyer | seller | both
+doc_id: k4-shopify-returns
+title: Shopify — Order management and fulfillment (returns & refunds)
+source_url: https://help.shopify.com/en/manual/orders/returns-and-refunds
+retrieved_at: 2026-08-03
+document_version: not-stated
+customer_role: buyer
 category: returns
-language: vi
-source_url: https://example.com/chinh-sach/doi-tra
-retrieved_at: 2026-08-02
-document_version: "2026.1"
+language: en
 ---
 
-> Khối metadata phía trên là **template mẫu** cho K4 (bắt buộc: `customer_role` + `source_url` + `retrieved_at` + `document_version`, cùng ít nhất một trường hữu ích khác như `category`). Thay bằng nguồn công khai thật của nhóm trước khi dùng làm benchmark.
+# Order management and fulfillment — Returns & refunds (excerpt)
 
-# Đổi trả hàng (dữ liệu khởi động)
+Order fulfillment is the workflow of processing, managing, and shipping customer orders from your Shopify store. After customers place orders, you can manage orders from the Orders page in your Shopify admin. This includes capturing payments, reviewing order details, printing shipping documents, and preparing items for fulfillment. You can also issue refunds or cancel orders when needed.
 
-Người mua cần gửi yêu cầu đổi trả trong thời hạn được nêu trên trang sản phẩm hoặc chính sách của sàn. Yêu cầu phải kèm bằng chứng phù hợp khi hàng bị lỗi hoặc không đúng mô tả.
+When refunds are required, use the Orders admin to issue refunds and document the reason. Refunds and returns are managed according to your store's return policy (set in Settings > Policies) and the conditions you present to customers at purchase.
 
-Người bán có trách nhiệm phản hồi theo quy trình của sàn. Nhóm phải bổ sung nguồn chính sách công khai, điều kiện và ngoại lệ cụ thể trước khi viết gold answer.
+> Source: Shopify Help Center — Order management and fulfillment (returns & refunds). See source_url in front matter for full page.
